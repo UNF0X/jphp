@@ -62,7 +62,7 @@ $server = new HttpServer(8888, '127.0.0.1'); // port & host.
 $server->route('GET', '/client-data', function (HttpServerRequest $req, HttpServerResponse $res) {
     $res->contentType('text/html');
     $text = $req->attribute('text');
-    $client_data = '<b>Remove Adress</b> - '.$req->remoteAddress().'<br>'; //Add Remote Adress to $client_data
+    $client_data = '<b>Remote Adress</b> - '.$req->remoteAddress().'<br>'; //Add Remote Adress to $client_data
     $client_data .= '<b>Headers</b>:<br>'.print_r($req->headers(),1).'<br>'; //Add Headers to $client_data
     $client_data .= '<b>LocalAddress</b> - '.$req->localAddress().'<br>'; //Add LocalAddress to $client_data
     $client_data .= '<b>LocalPort</b> - '.$req->localPort().'<br>'; //Add LocalPort to $client_data
